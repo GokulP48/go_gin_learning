@@ -12,7 +12,6 @@ import (
 var DB *gorm.DB
 
 func InitDBConnection() {
-	logger.Infof(".............: %s", config.AppConfig.DB.Host)
 	dsn := fmt.Sprintf(
 		"host=%s user=%s password=%s dbname=%s port=%s sslmode=disable",
 		config.AppConfig.DB.Host, config.AppConfig.DB.User, config.AppConfig.DB.Password, config.AppConfig.DB.Name, config.AppConfig.DB.Port,

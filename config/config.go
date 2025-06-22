@@ -10,6 +10,7 @@ import (
 type Config struct {
 	Server ServerConfig   `yaml:"server"`
 	DB     DatabaseConfig `yaml:"database"`
+	Logger Logger         `yaml:"logger"`
 }
 
 type ServerConfig struct {
@@ -22,6 +23,10 @@ type DatabaseConfig struct {
 	User     string `yaml:"user"`
 	Password string `yaml:"password"`
 	Name     string `yaml:"name"`
+}
+
+type Logger struct {
+	Level string `yaml:"level"`
 }
 
 var AppConfig Config
